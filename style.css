@@ -2,6 +2,15 @@ BODY {
   background-color: rgb(206, 242, 230);
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+div > h1 {
+  margin: 0;
+}
+button {
+  margin: 0;
 }
 .game-container {
   text-align: center;
@@ -9,14 +18,11 @@ BODY {
   padding: 20px;
   width: 80vh;
   height: 80vh;
-  border: 2px solid black;
-  border-radius: 20px;
-  background-color: rgb(71, 110, 19);
+  border: 2px solid #2196f3;
+  border-radius: 2px;
+  background-color: #2196f3;
 }
-h1 {
-  margin: 0;
-  color: white;
-}
+
 .score-board {
   display: flex;
   justify-content: space-between;
@@ -24,8 +30,18 @@ h1 {
   font-size: 23px;
   color: white;
 }
-.game-board {
-  background-color: rgb(183, 208, 23);
+#game-board {
+  background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
-  height: 90%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  /* grid-template: repeat(30, 1fr) / repeat(30, 1fr); */
+}
+.snake {
+  background-color: blue;
+}
+#food {
+  background-color: red;
 }
