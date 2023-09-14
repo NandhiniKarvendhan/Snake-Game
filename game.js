@@ -11,7 +11,5 @@ let foodY = Math.round(30 * Math.random()) + 1;
 console.log(foodY);
 // gameStartButton.onclick = foodLocation;
 function foodLocation() {
-  score.style.backgroundColor = "lightblue";
-  //   console.log(score);
-  food.style.gridArea = foodX / foodY;
+  food.style.gridArea = 16 / 6;
 }
