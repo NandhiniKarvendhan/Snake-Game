@@ -10,11 +10,11 @@ div > h1 {
   margin: 0;
 }
 button {
-  margin: 0;
+  margin: 5px;
 }
 .game-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
   padding: 20px;
   width: 80vh;
   height: 80vh;
@@ -41,7 +41,9 @@ button {
 }
 .snake {
   background-color: blue;
+  grid-area: 3/3;
 }
 #food {
   background-color: red;
+  grid-area: 29/23;
 }
