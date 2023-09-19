@@ -16,8 +16,8 @@ button {
   text-align: center;
   margin-top: 10px;
   padding: 20px;
-  width: 80vh;
-  height: 80vh;
+  width: 80vmin;
+  height: 80vmin;
   border: 2px solid #2196f3;
   border-radius: 2px;
   background-color: #2196f3;
