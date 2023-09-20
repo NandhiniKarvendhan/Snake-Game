@@ -2,8 +2,15 @@ let gameBoard = document.getElementById("game-board");
 let score = document.getElementById("score");
 let highestScore = document.getElementById("highest-score");
 
-let foodX = 15,
-  foodY = 10;
+let foodX, foodY;
+let snakeX = 2,
+  snakeY = 2;
+
+const startGame = () => {
+  let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
+  htmlMarkup += `<div class="snake" style="grid-area: ${snakeY} / ${snakeX}"></div>`;
+  gameBoard.innerHTML = htmlMarkup;
+};
 
 const updateFoodPosition = () => {
   // Passing a random 1 - 30 value as food position
@@ -13,3 +20,4 @@ const updateFoodPosition = () => {
   console.log(foodY);
 };
 updateFoodPosition();
+startGame();
