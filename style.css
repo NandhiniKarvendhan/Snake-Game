@@ -41,9 +41,7 @@ button {
 }
 .snake {
   background-color: blue;
-  grid-area: 3/3;
 }
 .food {
   background-color: red;
-  grid-area: 29/23;
 }
