@@ -4,7 +4,7 @@ A simple snake game with HTML, CSS, vanilla JavaScript.
 
 ## ScreenShot
 
-[!](/snake_game.png)
+![](/snake_game.png)
 
 ## How to use
 
