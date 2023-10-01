@@ -2,6 +2,10 @@
 
 A simple snake game with HTML, CSS, vanilla JavaScript.
 
+## ScreenShot
+
+[!](/snake_game.png)
+
 ## How to use
 
 1. Download or clone this repository.
