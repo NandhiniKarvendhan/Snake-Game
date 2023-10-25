@@ -2,6 +2,8 @@
 
 A simple snake game with HTML, CSS, vanilla JavaScript.
 
+## [Demo](https://nandhinikarvendhan.github.io/Snake-Game/)
+
 ## ScreenShot
 
 ![](/snake_game.png)
