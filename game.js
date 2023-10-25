@@ -13,7 +13,7 @@ console.log(gameHighestScore);
 const startGame = () => {
   snakeX += velocityX;
   snakeY += velocityY;
-  let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
+  let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"><img src="./apple.png" /></div>`;
   htmlMarkup += `<div class="snake" style="grid-area: ${snakeY} / ${snakeX}"></div>`;
   gameBoard.innerHTML = htmlMarkup;
   // changing food postion after snake eats the food
