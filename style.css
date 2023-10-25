@@ -42,6 +42,8 @@ button {
 .snake {
   background-color: blue;
 }
-.food {
-  background-color: red;
+
+.food img {
+  width: 18px;
+  height: 18px;
 }
