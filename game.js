@@ -7,6 +7,7 @@ let snakeX = 2,
   snakeY = 2;
 let velocityX = 0,
   velocityY = 0;
+let snakeBody = [];
 let gameScore = 0,
   gameHighestScore = localStorage.getItem("high-score");
 console.log(gameHighestScore);
@@ -19,6 +20,7 @@ const startGame = () => {
   // changing food postion after snake eats the food
   if ((snakeX === foodX) & (snakeY === foodY)) {
     updateFoodPosition();
+    snakeBody.push([foodY, foodX]);
     gameScore += 1;
     score.innerHTML = `Score: ${gameScore}`;
     gameHighestScore =
@@ -27,8 +29,27 @@ const startGame = () => {
     console.log(gameHighestScore);
     highestScore.innerHTML = `Highest Score: ${gameHighestScore}`;
   }
+
+  for (let i = snakeBody.length - 1; i > 0; i--) {
+    snakeBody[i] = snakeBody[i - 1];
+    console.log(snakeBody);
+  }
+  snakeBody[0] = [snakeX, snakeY];
   if (snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
     gameOver();
+  }
+  for (let i = 0; i < snakeBody.length; i++) {
+    // Adding a div for each part of the snake's body
+    htmlMarkup += `<div class="snake" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
+    // Checking if the snake head hit the body, if so set gameOver to true
+    if (
+      i !== 0 &&
+      snakeBody[0][1] === snakeBody[i][1] &&
+      snakeBody[0][0] === snakeBody[i][0]
+    ) {
+      //   gameOver = true;
+      gameOver();
+    }
   }
 };
 
