@@ -1,6 +1,7 @@
 let gameBoard = document.getElementById("game-board");
 let score = document.getElementById("score");
 let highestScore = document.getElementById("highest-score");
+let pauseButton = document.getElementById("pauseBtn");
 
 let foodX, foodY;
 let snakeX = 2,
@@ -10,7 +11,12 @@ let velocityX = 0,
 let snakeBody = [];
 let gameScore = 0,
   gameHighestScore = localStorage.getItem("high-score");
-console.log(gameHighestScore);
+
+function pauseGame() {
+  pauseButton.disabled = true;
+  console.log("game is paused");
+}
+
 const startGame = () => {
   snakeX += velocityX;
   snakeY += velocityY;
